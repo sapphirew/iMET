@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+
+    </style>
+    <style name="QuestionTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+    </style>
+    <style name="LinearLayoutTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+</resources>
