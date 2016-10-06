@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.wanghao.imet.QuestionActivity">
+    tools:context="com.example.wanghao.imet.questions.QuestionActivity">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -16,6 +17,7 @@
                 android:text="Submit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:id="@+id/submitQuestionButton"
                 android:gravity="left|center_vertical|center_horizontal"
                 android:background="#7012b0"
@@ -255,9 +257,9 @@
                     android:padding="10dp"
                     tools:ignore="RtlHardcoded"
                     style="@android:style/Widget.Button" />
+
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>

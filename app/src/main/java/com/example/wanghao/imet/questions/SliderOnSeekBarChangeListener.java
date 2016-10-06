@@ -1,4 +1,4 @@
-package com.example.wanghao.imet;
+package com.example.wanghao.imet.questions;
 
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -11,7 +11,8 @@ public class SliderOnSeekBarChangeListener implements SeekBar.OnSeekBarChangeLis
 
     private TextView textView;
     private String title;
-    private static String[] descriptions = {"AT THE LOWEST POINT", "EXTREMELY DOWN (life is not worth living)",
+    private static String[] descriptions = {
+            "AT THE LOWEST POINT", "EXTREMELY DOWN (life is not worth living)",
             "SEVERELY DOWN - almost all day", "SEVERELY DOWN- less than 50% of the day",
             "MODERATELY DOWN -almost all day", "MODERATELY DOWN - less than 50% of the day",
             "MILDLY DOWN -almost all day", "MILDLY DOWN - less than 50% of the day",
@@ -20,7 +21,8 @@ public class SliderOnSeekBarChangeListener implements SeekBar.OnSeekBarChangeLis
             "MILDLY ELEVATED-less than 50% of the day", "MILDLY ELEVATED-almost all day",
             "MODERATELY ELEVATED- less than 50% of the day", "MODERATELY ELEVATED-almost all day",
             "SEVERELY ELEVATED- less than 50% of the day", "SEVERELY ELEVATED-almost all day",
-            "EXTREMELY ELEVATED", "+10 SUPER ELEVATED"};
+            "EXTREMELY ELEVATED", "+10 SUPER ELEVATED"
+    };
     public SliderOnSeekBarChangeListener(TextView view) {
         this.textView = view;
         this.title = textView.getText().toString();
@@ -34,7 +36,7 @@ public class SliderOnSeekBarChangeListener implements SeekBar.OnSeekBarChangeLis
 
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
-
+        ((QuestionActivity) seekBar.getContext()).setAtLeastOneSelectedToTrue();
     }
 
     @Override

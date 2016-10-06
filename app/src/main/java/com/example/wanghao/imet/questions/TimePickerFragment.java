@@ -1,4 +1,4 @@
-package com.example.wanghao.imet;
+package com.example.wanghao.imet.questions;
 
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.widget.Button;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -30,7 +29,7 @@ public class TimePickerFragment extends DialogFragment
         int minute = c.get(Calendar.MINUTE);
         buttonId = getArguments().getInt("buttonID");
         String name = String.valueOf(buttonId);
-        Toast.makeText(getActivity(), name, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(), name, Toast.LENGTH_SHORT).show();
         // Create a new instance of TimePickerDialog and return it
         return new TimePickerDialog(getActivity(), this, hour, minute,
                 true);

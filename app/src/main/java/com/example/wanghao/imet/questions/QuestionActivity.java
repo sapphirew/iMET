@@ -1,7 +1,6 @@
-package com.example.wanghao.imet;
+package com.example.wanghao.imet.questions;
 
 import android.app.DialogFragment;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -9,10 +8,13 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.example.wanghao.imet.R;
+
 import java.util.ArrayList;
 
 public class QuestionActivity extends FragmentActivity {
 
+    private boolean atLeastOneSelected = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,13 +23,8 @@ public class QuestionActivity extends FragmentActivity {
         setSeekBarsListeners();
 
         Button submitButton = (Button) findViewById(R.id.submitQuestionButton);
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=  new Intent(QuestionActivity.this, SummaryActivity.class);
-                startActivity(intent);
-            }
-        });
+        submitButton.setOnClickListener(new SubmitButtonOnClickListener());
+
     }
 
     private void setSeekBarsListeners() {
@@ -46,6 +43,14 @@ public class QuestionActivity extends FragmentActivity {
         for (int i = 0; i < textViews.size(); i++) {
             seekBars.get(i).setOnSeekBarChangeListener(new SliderOnSeekBarChangeListener(textViews.get(i)));
         }
+    }
+
+    public void setAtLeastOneSelectedToTrue() {
+        this.atLeastOneSelected = true;
+    }
+
+    public boolean isAtLeastOneSelected() {
+        return this.atLeastOneSelected;
     }
 
     public void showTimePickerDialog(View v) {
