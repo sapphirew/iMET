@@ -17,11 +17,11 @@ public class SliderOnSeekBarChangeListener implements SeekBar.OnSeekBarChangeLis
             "MODERATELY DOWN -almost all day", "MODERATELY DOWN - less than 50% of the day",
             "MILDLY DOWN -almost all day", "MILDLY DOWN - less than 50% of the day",
             "SLIGHTLY DOWN-almost all day", "SLIGHTLY DOWN- less than 50% of the day",
-            "Ok", "SLIGHTLY ELEVATED- less than 50% of the day", "SLIGHTLY ELEVATED-almost all day long",
+            "OK    ", "SLIGHTLY ELEVATED- less than 50% of the day", "SLIGHTLY ELEVATED-almost all day long",
             "MILDLY ELEVATED-less than 50% of the day", "MILDLY ELEVATED-almost all day",
             "MODERATELY ELEVATED- less than 50% of the day", "MODERATELY ELEVATED-almost all day",
             "SEVERELY ELEVATED- less than 50% of the day", "SEVERELY ELEVATED-almost all day",
-            "EXTREMELY ELEVATED", "+10 SUPER ELEVATED"
+            "EXTREMELY ELEVATED", "SUPER ELEVATED"
     };
     public SliderOnSeekBarChangeListener(TextView view) {
         this.textView = view;
