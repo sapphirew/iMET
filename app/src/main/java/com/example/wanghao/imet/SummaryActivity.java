@@ -24,10 +24,10 @@ public class SummaryActivity extends ActionBarActivity {
             public String formatLabel(double value, boolean isValueX) {
                 if (isValueX) {
                     // show normal x values
-                    return "Day " + super.formatLabel(value + 1, isValueX);
+                    return "Oct " + super.formatLabel(value + 5, isValueX);
                 } else {
                     // show currency for y values
-                    return super.formatLabel(value, isValueX);
+                    return super.formatLabel(value + 10, isValueX);
                 }
             }
         });

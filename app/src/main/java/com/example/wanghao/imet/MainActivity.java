@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.wanghao.imet.questions.QuestionActivity;
@@ -31,6 +32,15 @@ public class MainActivity extends ActionBarActivity {
                 } else {
                     makeToast("Wrong email or password");
                 }
+            }
+        });
+
+        TextView createAccount = (TextView) findViewById(R.id.createAccountText);
+        createAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=  new Intent(MainActivity.this, SignUpActivity.class);
+                startActivity(intent);
             }
         });
 
