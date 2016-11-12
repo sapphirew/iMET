@@ -25,8 +25,9 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 EditText email = (EditText) findViewById(R.id.emailEditText);
                 EditText password = (EditText) findViewById(R.id.passwordEditText);
-                if (email.getText().toString().equals("admin") && password.getText().toString().equals("admin")) {
-                    makeToast("Welcome admin!");
+                String pass = SignUpDAO.getPass(v.getContext(), email.getText().toString());
+                if ((pass != null && pass.equals(password.getText().toString())) || (email.getText().toString().equals("admin") && password.getText().toString().equals("admin"))) {
+                    makeToast("Welcome!");
                     Intent intent=  new Intent(MainActivity.this, QuestionActivity.class);
                     startActivity(intent);
                 } else {
@@ -34,7 +35,7 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         });
-
+        
         TextView createAccount = (TextView) findViewById(R.id.createAccountText);
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
